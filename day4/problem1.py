@@ -1,5 +1,4 @@
 valid = 0
-fields = ["byr","iyr","eyr","hgt","hcl","ecl","pid"]
 with open("day4/input.txt","r") as input:
     passports = input.read().split("\n\n")
 
