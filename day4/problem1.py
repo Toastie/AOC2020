@@ -6,12 +6,7 @@ with open("day4/input.txt","r") as input:
 for entry in passports:
     temp = entry.replace("\n"," ").split(" ")
 
-    valid += 1
-
-    if len(temp) != 8:
-        for value in fields:
-            if not entry.count(value):
-                valid -= 1
-                break
+    if len(temp) == 8 or (len(temp) == 7 and not entry.count("cid")):
+        valid += 1
 
 print(valid)
